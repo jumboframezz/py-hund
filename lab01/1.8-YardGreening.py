@@ -25,3 +25,9 @@ final_price = price - discount
 print(f"The final price is: {final_price} lv.")
 print(f"The discount is: {discount} lv.")
 
+# git init
+# git add README.md
+# git commit -m "first commit"
+# git branch -M master
+# git remote add origin git@github.com:jumboframezz/py-fundamentals.git
+# git push -u origin master
