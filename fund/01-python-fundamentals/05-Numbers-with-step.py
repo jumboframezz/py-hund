@@ -11,11 +11,6 @@ end = int(input())
 step = int(input())
 
 
-if step >= 1:
-    for i in range (start, end, step):
-        print (i)
-else:
-    for i in range ( start, end , step):
-        print (i)
 
-
+for i in range (start, end, step):
+    print (i)
