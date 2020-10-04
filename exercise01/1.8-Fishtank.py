@@ -31,4 +31,12 @@
 # литрите, които ще трябват : 299.625*(1-0.17) = 248.68875 литра
 
 
+length = int(input())
+width =  int(input())
+height = int(input())
+percent = float(input())
+volume = length * width * height
+volume_ltr = volume / 1000
 
+volume_ltr -= volume_ltr * (percent*0.01)
+print(volume_ltr)
