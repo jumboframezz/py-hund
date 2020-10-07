@@ -19,7 +19,7 @@
 #  Ако сте загубили на турнира:
 # "You lost the tournament! Total raised money: {спечелените пари}"
 # Парите да бъдат форматирани до втората цифра след десетичния знак.
-
+#https://judge.softuni.bg/Contests/Practice/Index/2275?fbclid=IwAR3sPXgKAm96SrHzfHWwI7tBbyOZKbsrnacsyqC2bzUSbpHmVtp9aifFx5w#8
 
 num_days = int(input())
 wins_total = 0
@@ -35,17 +35,17 @@ for day in range(1, num_days+1):
     while not sport == "Finish":
         result = input()
         if result == "win":
-            earnings += 20
-            wins +=1
+            wins += 1
         else:
             losses += 1
-        if wins > losses:
-            earnings += (earnings * 0.1)
         sport = input()
+    earnings = wins * 20
+    if wins > losses:
+        earnings += (earnings * 0.1)
     losses_total += losses
     wins_total += wins
     earnings_total += earnings
-    print(f"Day: {day} earings: {earnings}")
+
 
 if wins_total > losses_total:
     earnings_total += earnings_total * 0.2
