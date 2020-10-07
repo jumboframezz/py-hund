@@ -34,31 +34,18 @@ booster_qty  = int(input())
 
 
 if booster_type == "Watermelon":
-    if booster_size == "small":
-        price = 56
-    else:
-        price = 28.70
+    price = 56 if booster_size == "small" else 28.70
 
 if booster_type == "Mango":
-    if booster_size == "small":
-        price = 36.66
-    else:
-        price = 19.60
-if booster_type == "Pineapple":
-    if booster_size == "small":
-        price = 42.10
-    else:
-        price = 24.80
-if booster_type == "Raspberry":
-    if booster_size == "small":
-        price = 20.00
-    else:
-        price = 15.20
+    price = 36.66 if booster_size == "small" else 19.60
 
-if booster_size == "small":
-     price *= 2
-else:
-     price *= 5
+if booster_type == "Pineapple":
+    price = 42.10 if booster_size == "small" else 24.80
+
+if booster_type == "Raspberry":
+    price = 20.00 if booster_size == "small" else 15.20
+
+price *= 2 if booster_size == "small" else 5
 
 sub_total = price * booster_qty
 
