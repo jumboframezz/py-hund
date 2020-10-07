@@ -34,11 +34,9 @@ while True:
 
         trunk_volume -= suitcase_vol
         if trunk_volume < 0:
-
             print("No more space!")
             break
         count += 1
-
     else:
         if suitcase == "End":
             print("Congratulations! All suitcases are loaded!")
