@@ -9,17 +9,17 @@
 # Вход
 # Първоначално от конзолата се прочита броя дни на турнира – цяло число в интервала [1… 20]
 # До получаване на командата "Finish" се чете:
-#  Спорт – текст
+# • Спорт – текст
 # За всеки спорт се прочита:
 # o Резултат – текст с възможности: "win" или "lose"
 # Изход
 # Накрая се отпечатва един ред:
-#  Ако сте спечелили турнира:
+# • Ако сте спечелили турнира:
 #  "You won the tournament! Total raised money: {спечелените пари}"
-#  Ако сте загубили на турнира:
+# • Ако сте загубили на турнира:
 # "You lost the tournament! Total raised money: {спечелените пари}"
 # Парите да бъдат форматирани до втората цифра след десетичния знак.
-#https://judge.softuni.bg/Contests/Practice/Index/2275?fbclid=IwAR3sPXgKAm96SrHzfHWwI7tBbyOZKbsrnacsyqC2bzUSbpHmVtp9aifFx5w#8
+# https://judge.softuni.bg/Contests/Practice/Index/2275?fbclid=IwAR3sPXgKAm96SrHzfHWwI7tBbyOZKbsrnacsyqC2bzUSbpHmVtp9aifFx5w#8
 
 num_days = int(input())
 wins_total = 0
@@ -45,7 +45,6 @@ for day in range(1, num_days+1):
     losses_total += losses
     wins_total += wins
     earnings_total += earnings
-
 
 if wins_total > losses_total:
     earnings_total += earnings_total * 0.2

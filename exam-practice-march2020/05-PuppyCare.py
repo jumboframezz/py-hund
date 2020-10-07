@@ -9,9 +9,9 @@
 # кученцето на всяко хранене - цяло число в интервала [10 …1000]
 # Изход
 # На конзолата се отпечатва 1 ред:
-#  Ако количеството храна е достатъчно да се отпечата:
+# • Ако количеството храна е достатъчно да се отпечата:
 # "Food is enough! Leftovers: {останала храна} grams."
-#  Ако количеството храна не е достатъчно да се отпечата:
+# • Ако количеството храна не е достатъчно да се отпечата:
 # "Food is not enough. You need {нужно количество храна} grams more."
 # https://judge.softuni.bg/Contests/Practice/Index/2275?fbclid=IwAR3sPXgKAm96SrHzfHWwI7tBbyOZKbsrnacsyqC2bzUSbpHmVtp9aifFx5w#8
 
@@ -20,7 +20,7 @@ food_amount_g = food_amount_kg * 1000
 
 portion = input()
 while not portion == "Adopted":
-    food_amount_g -= int (portion)
+    food_amount_g -= int(portion)
     portion = input()
 
 if food_amount_g >= 0:

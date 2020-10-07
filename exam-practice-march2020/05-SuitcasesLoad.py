@@ -18,7 +18,6 @@
 # * Накрая винаги се отпечатва статистика – колко багажа са натоварени:
 # "Statistic: {брой натоварени багажи} suitcases loaded."
 
-
 trunk_volume = float(input())
 
 suitcase = input()
