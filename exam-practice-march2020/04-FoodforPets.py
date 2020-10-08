@@ -37,3 +37,33 @@
 # 510гр от 600гр = 85% е изяло кучето.
 # 90гр от 600гр = 15% е изяла котката.
 # https://judge.softuni.bg/Contests/Practice/Index/2275?fbclid=IwAR3dpVl_cdwmMHiBJAQQLy3acvK6iJJ3POPK3HFHycHwQeYyfSac5LTD24Y#6
+
+
+def percentage(part, whole):
+    return 100 * float(part) / float(whole)
+
+
+num_days = int(input())
+food_amount = float(input())
+biscuits = 0
+total_dog = 0
+total_cat = 0
+total_eaten = 0
+for days in range(1, num_days + 1):
+    eaten_by_dog = int(input())
+    eaten_by_cat = int(input())
+    total_dog += eaten_by_dog
+    total_cat += eaten_by_cat
+    total_eaten += eaten_by_dog + eaten_by_cat
+
+    if days % 3 == 0:
+        biscuits += (eaten_by_dog + eaten_by_cat) * 0.1
+
+percent_eaten = percentage(total_eaten, food_amount)
+dog_percent = percentage(total_dog, total_eaten)
+cat_percent = percentage(total_cat, total_eaten)
+biscuits_round = round(biscuits)
+print(f"Total eaten biscuits: {biscuits_round}gr.")
+print(f"{percent_eaten:.2f}% of the food has been eaten.")
+print(f"{dog_percent:.2f}% eaten from the dog.")
+print(f"{cat_percent:.2f}% eaten from the cat.")
