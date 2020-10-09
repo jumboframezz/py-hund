@@ -20,5 +20,32 @@
 
 egg_size = input()
 egg_color = input()
-lot_number = input(input())
+lot_number = int(input())
+egg_price = 0
+total = 0.00
 
+if egg_size == "Large":
+    if egg_color == "Red":
+        egg_price = 16
+    elif egg_color == "Green":
+        egg_price = 12
+    else:
+        egg_price = 9
+elif egg_size == "Medium":
+    if egg_color == "Red":
+        egg_price = 13
+    elif egg_color == "Green":
+        egg_price = 9
+    else:
+        egg_price = 7
+else:
+    if egg_color == "Red":
+        egg_price = 9
+    elif egg_color == "Green":
+        egg_price = 8
+    else:
+        egg_price = 5
+
+total = float(egg_price * lot_number)
+total -= total * 0.35
+print(f"{total:.2f} leva.")
