@@ -55,12 +55,8 @@ total *= 0.9
 
 income = total - trip_price
 
-
-
-
 if income >= 0:
     print(f"Yes! {income:.2f} lv left.")
-
 else:
     income *= -1
     print(f"Not enough money! {income:.2f} lv needed.")
