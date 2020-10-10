@@ -25,10 +25,13 @@
 egg_sold = 0
 egg_count = int(input())
 
-egg_command = input()
-egg_params = int(input())
 
-while not egg_command == "Close":
+while True:
+    egg_command = input()
+    if egg_command == "Close":
+        break
+
+    egg_params = int(input())
     if egg_command == "Buy":
         if egg_count - egg_params < 0:
             print("Not enough eggs in store!")
@@ -36,10 +39,10 @@ while not egg_command == "Close":
             exit(0)
         egg_count -= egg_params
         egg_sold += egg_params
-    else:
+    elif egg_command == "Fill":
         egg_count += egg_params
-    egg_command = input()
-    egg_params = int(input())
+
+
 
 print("Store is closed!")
-print(f"{exit()} eggs sold")
+print(f"{egg_sold} eggs sold.")
