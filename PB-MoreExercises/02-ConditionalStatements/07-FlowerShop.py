@@ -30,11 +30,11 @@ cactus_num = int(input())
 gift_price = float(input())
 
 sub_total = (magnolia_num * 3.25) + (hyacinth_num * 4) + (rose_num * 3.50) + (cactus_num * 8)
-sub_total -= sub_total * 0.95
+sub_total -= sub_total * 0.05
 
 if sub_total >= gift_price:
-    diff = gift_price - sub_total
+    diff = sub_total - gift_price
     print(f"She is left with {math.floor(diff)} leva.")
 else:
-    diff =  sub_total - gift_price
+    diff = gift_price - sub_total
     print(f"She will have to borrow {math.ceil(diff)} leva.")
