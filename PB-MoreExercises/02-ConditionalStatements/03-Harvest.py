@@ -32,17 +32,13 @@ total_grapes = vineyard_area * grapes_per_metter
 lt_vine = total_grapes / 2.5
 
 if lt_vine < lt_vine_needed:
-    ## Round down
-    diff =math.floor(lt_vine_needed - lt_vine)
+    # Round down
+    diff = math.floor(lt_vine_needed - lt_vine)
     print(f"It will be a tough winter! More {diff} liters wine needed.")
 else:
-
-    ## Round down
-    rwine = math.floor(lt_vine)
-    print(f"Good harvest this year! Total wine: {rwine} liters.")
-
-    ## Round up
+    # Round down
+    print(f"Good harvest this year! Total wine: {math.floor(lt_vine)} liters.")
+    # Round up
     diff = math.ceil(lt_vine - lt_vine_needed)
     vine_per_person = math.ceil(diff / num_workers)
-
     print(f"{diff} liters left -> {vine_per_person} liters per person.")
