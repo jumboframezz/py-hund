@@ -22,4 +22,14 @@ def inside(xr, yr, xr1, yr1, xr2, yr2):
     else:
         return False
 
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+def is_weekend(day):
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    if day not in days:
+        return "Error"
+    elif days.index(day) >= 0 and days.index(day) <= 4:
+        return "WorkingDay"
+    else:
+        return "Weekend"
 '''
