@@ -15,11 +15,6 @@ cmd = {"c": 0, "o": 0, "n": 0}
 cmd_chars = ["c", "n", "o"]
 
 
-def update_cmd(in_letter):
-    if in_letter in cmd_chars and cmd[in_letter] == 0:
-        cmd[in_letter] = 1
-
-
 def check_word_end():
     dsum = 0
     for i in cmd_chars:
@@ -33,16 +28,17 @@ def check_word_end():
 in_char = input()
 word = ""
 while in_char != "End":
-    if not in_char >= "A" and in_char <= "z":
-        in_char = input()
-        continue
 
-    update_cmd(in_char)
+    if in_char in cmd_chars:
+        if cmd[in_char] == 1:
+            word += in_char
+        else:
+            cmd[in_char] = 1
+    else:
+        if in_char.isalpha():
+            word += in_char
     if check_word_end():
-        print("got end of word")
-    # print(cmd)
-
-    word += in_char
+        print(word, end=" ")
+        cmd = {"c": 0, "o": 0, "n": 0}
+        word = ""
     in_char = input()
-
-print(word)
