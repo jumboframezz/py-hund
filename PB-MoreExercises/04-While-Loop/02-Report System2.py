@@ -22,6 +22,7 @@
 #     o "Failed to collect required money for charity."
 # https://judge.softuni.bg/Contests/Practice/Index/1684#1
 
+# Simplified solution
 target_sum = int(input())
 sale = input()
 total = 0
@@ -36,9 +37,6 @@ while total <= target_sum:
     if deal_counter % 2 != 0:
         if price > 100:
             print("Error in transaction!")
-            deal_counter += 1
-            sale = input()
-            continue
         else:
             total += price
             cache_deal_counter += 1
@@ -47,9 +45,6 @@ while total <= target_sum:
     else:
         if price < 10:
             print("Error in transaction!")
-            deal_counter += 1
-            sale = input()
-            continue
         else:
             total += price
             card_deal_counter += 1
