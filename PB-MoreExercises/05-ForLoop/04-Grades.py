@@ -16,3 +16,34 @@
 # "Fail: {по-малко от 3.00}%"
 # "Average: {среден успех}"
 # Всички числа трябва да са форматирани до вторият знак след десетичната запетая.
+# Expected output OK, need to check in judge
+
+def percentage(part, whole):
+    return 100 * float(part) / float(whole)
+
+
+average_grade = 0
+grade_5 = 0
+grade_4 = 0
+grade_3 = 0
+grade_2 = 0
+grade_total = 0
+
+num_students = int(input())
+for cnt in range(0, num_students):
+    grade = float(input())
+    if grade >= 5:
+        grade_5 += 1
+    elif 4 <= grade <= 4.99:
+        grade_4 += 1
+    elif 3 <= grade <= 3.99:
+        grade_3 += 1
+    elif grade < 3:
+        grade_2 += 1
+    grade_total += grade
+
+print(f"Top students: {percentage(grade_5, num_students):.2f}%")
+print(f"Between 4.00 and 4.99: {percentage(grade_4, num_students):.2f}%")
+print(f"Between 3.00 and 3.99: {percentage(grade_3, num_students):.2f}%")
+print(f"Fail: {percentage(grade_2, num_students):.2f}%")
+print(f"Average: {grade_total / num_students:.2f}")

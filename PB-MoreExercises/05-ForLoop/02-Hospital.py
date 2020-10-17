@@ -15,6 +15,7 @@
 # Да се отпечатат на конзолата 2 реда :
 # На първия ред: "Treated patients: {брой прегледани пациенти}."
 # На втория ред: "Untreated patients: {брой непрегледани пациенти}."
+# Errors in judge, need to fix
 
 num_days = int(input())
 num_doctors = 7
