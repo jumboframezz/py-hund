@@ -24,18 +24,19 @@ lily_age = int(input())
 washer_price = float(input())
 toy_price = int(input())
 money = 0
-money_increment = 9
+money_increment = 10
 toy_num = 0
+stealed_money = 0
 for i in range(1, lily_age + 1):
     if i & 1 == 0:
         money += money_increment
-        money_increment += 9
+        money_increment += 10
+        stealed_money += 1
     else:
         toy_num += 1
 
-total_money = money + toy_num * toy_price
-print(f"Money: {money}")
-print(f"Total: {total_money}")
+total_money = (money + toy_num * toy_price) - stealed_money
+
 if total_money - washer_price >= 0:
     print(f"Yes! {total_money - washer_price:.2f}")
 else:
