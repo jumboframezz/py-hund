@@ -13,3 +13,15 @@
 # "You have lost your salary." и програмата приключва. В противен случай след проверката на конзолата се изписва
 # остатъкът от заплатата (да се изпише като цяло число).
 
+fee = {"Facebook": 150, "Instagram": 100, "Reddit": 50}
+
+n = int(input())
+salary = float(input())
+for i in range(n):
+    site_name = input()
+    if site_name in fee:
+        salary -= fee[site_name]
+    if salary <= 0:
+        print("You have lost your salary.")
+        exit(0)
+print(f"{int(salary)}")
