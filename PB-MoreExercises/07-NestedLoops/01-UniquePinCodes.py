@@ -11,3 +11,26 @@
 # Горната граница на третото число - цяло число в диапазона [1...9]
 # Изход
 # Да се отпечатат на конзолата всички валидни трицифрени PIN кодове, чиито цифри отговарят на съответните интервали.
+
+
+def prime_number(n):
+    if n > 1:
+        for i in range(2, n):
+            if (n % i) == 0:
+                return False
+        return True
+    else:
+        return False
+
+
+limes1 = int(input())
+limes2 = int(input())
+limes3 = int(input())
+
+for num1 in range(1, limes1+1):
+    if num1 % 2 == 0:
+        for num2 in range(1, limes2+1):
+            if prime_number(num2):
+                for num3 in range(1, limes3+1):
+                    if num3 % 2 == 0:
+                        print(f"{num1} {num2} {num3}")
