@@ -18,11 +18,22 @@
 last_sector = input()
 last_sector_num = ord(last_sector)
 start_sector_num = ord("A")
-
+start_seat_count = ord("a")
 first_sector_rows = int(input())
 odd_row_num = int(input())
+total_seats = 0
+seat = 0
 
 for sector in range(start_sector_num, last_sector_num+1):
+    for row_count in range(1, first_sector_rows+1):
+        if row_count % 2 == 0:
+            seat_count = odd_row_num + 2
+        else:
+            seat_count = odd_row_num
+        for seat in range(start_seat_count, start_seat_count + seat_count ):
+            print(f"{chr(sector)}{row_count}{chr(seat)}")
+            total_seats += 1
 
-    print(f"{chr(sector)}")
+    first_sector_rows += 1
 
+print(total_seats)
