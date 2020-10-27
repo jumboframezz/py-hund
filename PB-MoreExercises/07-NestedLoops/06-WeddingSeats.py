@@ -33,7 +33,6 @@ for sector in range(start_sector_num, last_sector_num+1):
         for seat in range(start_seat_count, start_seat_count + seat_count ):
             print(f"{chr(sector)}{row_count}{chr(seat)}")
             total_seats += 1
-
     first_sector_rows += 1
 
 print(total_seats)
