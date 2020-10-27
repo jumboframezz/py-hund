@@ -12,13 +12,14 @@ def prime_number(n):
     else:
         return False
 
-def check_pair(pnum):
-    first_digit = pnum // 10
-    second_digit = pnum % 10
 
-    if prime_number(first_digit) and prime_number(second_digit):
-        return True
-    return False
+# finds differences in days between 2 string dates. Keep in mind that if You use it from today +=1
+def days_between(d1, d2):
+    from datetime import datetime
+    d1 = datetime.strptime(d1, "%Y-%m-%d")
+    d2 = datetime.strptime(d2, "%Y-%m-%d")
+    return (d2 - d1).days
+
 
 
 def inrange (xr,yr, xr1, yr1,  xr2, yr2 ):
