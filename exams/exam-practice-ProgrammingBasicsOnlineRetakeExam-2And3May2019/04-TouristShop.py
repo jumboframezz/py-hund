@@ -23,19 +23,16 @@ budget = float(input())
 counter = 0
 sub_total = 0
 
-in_text = input()
-product_price = float(input())
-while in_text != "Stop":
-    if sub_total + product_price > budget:
-        print("You don't have enough money!")
-        print(f"You need {abs( sub_total + product_price - budget):.2f} leva!")
-        exit(0)
+product = input()
+while product != "Stop":
+    product_price = float(input())
     counter += 1
     if counter % 3 == 0:
         product_price *= 0.5
     sub_total += product_price
-    in_text = input()
-    if in_text == "Stop":
-        break
-    product_price = float(input())
+    if sub_total > budget:
+        print(f"You don't have enough money!")
+        print(f"You need {abs(budget - sub_total):.2f} leva!")
+        exit(0)
+    product = input()
 print(f"You bought {counter} products for {sub_total:.2f} leva.")
