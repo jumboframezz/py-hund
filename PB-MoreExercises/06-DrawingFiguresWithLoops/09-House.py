@@ -9,13 +9,6 @@
 #                               |****|
 #
 
-
-
-#n = int(input())
+# n = int(input())
 n = 4
 roof_lines = None
-
-roof_lines = int(n / 2) if n % 2 == 0 else int(n // 2 +1)
-
-for row in range(0, roof_lines):
-    print("-" * (n))
