@@ -1,5 +1,0 @@
-Top students: 30.00%
-Between 4.00 and 4.99: 30.00%
-Between 3.00 and 3.99: 20.00%
-Fail: 20.00%
-Average: 4.06
