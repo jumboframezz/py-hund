@@ -18,7 +18,7 @@
 # o "{процент на студентските билети}% student tickets."
 # o "{процент на стандартните билети}% standard tickets."
 # o "{процент на детските билети}% kids tickets."
-# All completed 28 Oct 2020 13:57 - 17:06
+#
 
 def percentage(part, whole):
     return 100 * float(part) / float(whole)
@@ -30,8 +30,11 @@ total_standard_tickets = 0
 total_kid_tickets = 0
 movie_ticket_counter = 0
 ticket_type = ""
-movie_name = input()
+
 while True:
+    movie_name = input()
+    if movie_name == "Finish":
+        break
     available_seats = int(input())
 
     for movie_ticket_counter in range(1, available_seats + 1):
@@ -48,9 +51,7 @@ while True:
 
     print(f"{movie_name} - {percentage(movie_ticket_counter, available_seats):.2f}% full.")
 
-    movie_name = input()
-    if movie_name == "Finish":
-        break
+
 
 total_tickets = total_student_tickets + total_standard_tickets + total_kid_tickets
 print(f"Total tickets: {total_tickets}")
