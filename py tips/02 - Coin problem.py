@@ -1,7 +1,11 @@
 # I was wondering if there is clever way to solve exercies.05 - While Loop. 05. Coins
 # Found this:
 
+<<<<<<< HEAD
 #URL https://en.wikipedia.org/wiki/Change-making_problem
+=======
+
+>>>>>>> origin/master
 def _get_change_making_matrix(set_of_coins, r: int):
     m = [[0 for _ in range(r + 1)] for _ in range(len(set_of_coins) + 1)]
     for i in range(1, r + 1):
