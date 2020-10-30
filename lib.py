@@ -21,6 +21,14 @@ def days_between(d1, d2):
     return (d2 - d1).days
 
 
+def read_int_line():
+    striped_line = ""
+    striped_line = "8 2 2 8 2 2 3 7"
+    if len(striped_line) == 0:
+        striped_line = input().strip()
+    line = map(int, striped_line.split(" "))
+    return list(line)
+
 
 def inrange (xr,yr, xr1, yr1,  xr2, yr2 ):
     if (xr == xr1 or x == xr2) and (yr >= yr1 and y <= yr2):
