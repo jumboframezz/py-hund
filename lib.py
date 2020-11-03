@@ -1,4 +1,4 @@
-'''
+
 def percentage(part, whole):
     return 100 * float(part) / float(whole)
 
@@ -31,7 +31,7 @@ def read_int_line():
 
 
 def inrange (xr,yr, xr1, yr1,  xr2, yr2 ):
-    if (xr == xr1 or x == xr2) and (yr >= yr1 and y <= yr2):
+    if (xr == xr1 or xr == xr2) and (yr >= yr1 and yr <= yr2):
         return True
     else:
         return False
@@ -39,12 +39,12 @@ def inrange (xr,yr, xr1, yr1,  xr2, yr2 ):
 def inborder (xr,yr, xr1, yr1,  xr2, yr2 ):
     if inrange(xr,yr, xr1, yr1,  xr2, yr2) or inrange(yr, xr, yr1, xr1, yr2, xr2):
         return True
-    else
+    else:
         return False
 
 # Instide in rectangle - not used
 def inside(xr, yr, xr1, yr1, xr2, yr2):
-    if (xr >= xr1 and x <= xr2) and (yr > yr1 and y < yr2):
+    if (xr >= xr1 and xr <= xr2) and (yr > yr1 and yr < yr2):
         return True
     else:
         return False
@@ -59,11 +59,11 @@ def is_weekend(day):
         return "WorkingDay"
     else:
         return "Weekend"
-'''
 
-'''
-Coins:
-I was searching for clever way and found: 
+
+
+# Coins:
+# I was searching for clever way and found:
 
 def _get_change_making_matrix(set_of_coins, r: int):
     m = [[0 for _ in range(r + 1)] for _ in range(len(set_of_coins) + 1)]
@@ -98,6 +98,8 @@ def change_making(coins, n: int):
 coins_values = [1, 2, 5, 10, 20, 50, 100, 200, 500]
 print(change_making(coins_values, 523))
 
+# Coins end
 
-
-'''
+# Reverse string:
+text = ""
+result = text[::-1]
