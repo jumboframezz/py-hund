@@ -24,11 +24,12 @@ l = int(input())
 alpha_start = ord("a")
 ii = ""
 i = ""
+
 last_digit = ""
 for i in range(1, n + 1):
     for ii in range(1, n + 1):
-        for first_letter in range(alpha_start, alpha_start + l + 2 ):
-            for second_letter in range(alpha_start, alpha_start+l + 2):
-                    #for last_digit in range(2, n):
-                    # if last_digit > i and last_digit > ii:
-                print(f"{i}{ii}{chr(first_letter)}{chr(second_letter)}{last_digit}", end=" ")
+        for first_letter in range(alpha_start, alpha_start + l):
+            for second_letter in range(alpha_start, alpha_start + l):
+                for last_digit in range(1, n + 1):
+                    if i < last_digit > ii:
+                        print(f"{i}{ii}{chr(first_letter)}{chr(second_letter)}{last_digit}", end=" ")
