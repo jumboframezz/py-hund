@@ -40,8 +40,6 @@ while target_height > current_height:
     if fail_count == 3:
         break
 
-
-
 if fail_count < 3:
     print(f"Tihomir succeeded, he jumped over {current_height}cm after {jump_count} jumps.")
 else:
