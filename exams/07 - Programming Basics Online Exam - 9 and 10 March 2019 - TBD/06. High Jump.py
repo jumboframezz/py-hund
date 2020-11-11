@@ -26,7 +26,7 @@ fail_count = 0
 jump_count = 1
 jump_height = 0
 
-while target_height > current_height:
+while target_height > current_height: #  the error should be here
     jump_height = int(input())
     jump_count += 1
     if jump_height > target_height == current_height:
