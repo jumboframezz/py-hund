@@ -16,11 +16,21 @@
 # екипировка.
 # Изход
 # На конзолата се отпечатват 2 реда:
-# • "Price to be paid by Djokovic {1/8 от общата цена, закръглена към по-малкото цяло
-# число}"
-# • "Price to be paid by sponsors {7/8 от общата цена, закръглена към по-голямото цяло
-# число}"
+# • "Price to be paid by Djokovic {1/8 от общата цена, закръглена към по-малкото цяло число}"
+# • "Price to be paid by sponsors {7/8 от общата цена, закръглена към по-голямото цяло число}"
+# Judge: https://judge.softuni.bg/Contests/Practice/Index/1538#0
+
+import math
 
 tennis_rocket_cost = float(input())
 tennis_rocket_num = int(input())
-sneakers_num - int(input())
+sneakers_num = int(input())
+sneakers_cost = tennis_rocket_cost / 6
+
+sub_total = tennis_rocket_cost * tennis_rocket_num + sneakers_cost * sneakers_num
+sub_total *= 1.2
+djokovic_pie = sub_total / 8
+sponsors_pie = djokovic_pie * 7
+
+print(f"Price to be paid by Djokovic {int(round(djokovic_pie, 3))}")
+print(f"Price to be paid by sponsors {math.ceil(sponsors_pie)}")
