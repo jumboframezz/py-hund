@@ -24,3 +24,43 @@
 #     • 6ти ред: "From 40 to 50: {процент в интервала}%"
 #     • 7ми ред: "Invalid numbers: {процент в интервала}%"
 # Всички числа трябва да са форматирана до вторият знак след запетаята.
+def percentage(part, whole):
+    return 100 * float(part) / float(whole)
+
+
+turns = int(input())
+counter_0 = 0
+counter_10 = 0
+counter_20 = 0
+counter_30 = 0
+counter_40 = 0
+counter_wrong = 0
+result = 0
+for turn in range(0, turns):
+    score = int(input())
+    if 0 <= score <= 9:
+        result += score * 0.2
+        counter_0 += 1
+    elif 10 <= score <= 19:
+        result += score * 0.3
+        counter_10 += 1
+    elif 20 <= score <= 29:
+        result += score * 0.4
+        counter_20 += 1
+    elif 30 <= score <= 39:
+        result += 50
+        counter_30 += 1
+    elif 40 <= score <= 50:
+        result += 100
+        counter_40 += 1
+    elif score >= 51 or score < 0:
+        result = result / 2
+        counter_wrong += 1
+
+print(f"{result:.2f}")
+print(f"From 0 to 9: {percentage(counter_0, turns):.2f}%")
+print(f"From 10 to 19: {percentage(counter_10, turns):.2f}%")
+print(f"From 20 to 29: {percentage(counter_20, turns):.2f}%")
+print(f"From 30 to 39: {percentage(counter_30, turns):.2f}%")
+print(f"From 40 to 50: {percentage(counter_40, turns):.2f}%")
+print(f"Invalid numbers: {percentage(counter_wrong, turns):.2f}%")
