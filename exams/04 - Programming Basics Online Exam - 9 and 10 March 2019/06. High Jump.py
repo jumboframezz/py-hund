@@ -22,28 +22,24 @@
 
 target_height = int(input())
 current_height = target_height - 30
-fail_count = 0
+fail_count = jump_height = 0
 jump_count = 1
-jump_height = 0
 
-while target_height > current_height: #  the error should be here
+while current_height <= target_height:
     jump_height = int(input())
-    jump_count += 1
-    if jump_height > target_height == current_height:
-        fail_count = 0
+    if jump_height > target_height and current_height == target_height:
         break
-    if jump_height > current_height:
+
+    if jump_height <= current_height:
+        fail_count += 1
+        if fail_count == 3:
+            break
+    else:
         fail_count = 0
         current_height += 5
-    else:
-        fail_count += 1
-    if fail_count == 3:
-        break
+    jump_count += 1
 
 if fail_count < 3:
     print(f"Tihomir succeeded, he jumped over {current_height}cm after {jump_count} jumps.")
 else:
-    print(f"Tihomir failed at {current_height}cm after {jump_count - 1} jumps.")
-
-
-
+    print(f"Tihomir failed at {current_height}cm after {jump_count} jumps.")
