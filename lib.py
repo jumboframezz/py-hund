@@ -109,6 +109,6 @@ result = text[::-1]
 
 nums = "alabala"
 a = 5 if len(nums) > 2 else 3 # a = 2
-
-
+nums = [1, 2, 34, 45,  55]
+lst = ["even" if _ % 2 == 0 else "odd" for _ in nums ]
 
