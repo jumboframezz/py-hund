@@ -38,7 +38,7 @@ def in_range (xr,yr, xr1, yr1,  xr2, yr2 ):
 
 
 def in_border (xr,yr, xr1, yr1,  xr2, yr2 ):
-    if inrange(xr,yr, xr1, yr1,  xr2, yr2) or inrange(yr, xr, yr1, xr1, yr2, xr2):
+    if in_range(xr,yr, xr1, yr1,  xr2, yr2) or in_range(yr, xr, yr1, xr1, yr2, xr2):
         return True
     else:
         return False
@@ -98,6 +98,8 @@ def change_making(coins, n: int):
             else:
                 m[c][r] = min(m[c - 1][r], 1 + m[c][r - coins[c - 1]])
     return m[-1][-1]
+
+
 coins_values = [1, 2, 5, 10, 20, 50, 100, 200, 500]
 print(change_making(coins_values, 523))
 
@@ -114,4 +116,4 @@ lst = ["even" if _ % 2 == 0 else "odd" for _ in nums]
 a = nums.copy()
 result = [[index, a[index]] for index in range(len(a))]
 
-matrix = [[j for j in range(5)] for i in range(5)] 
+matrix = [[j for j in range(5)] for i in range(5)]
