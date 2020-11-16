@@ -12,8 +12,7 @@
 def is_lucky(dl1, dl2, dl3, dl4, nl):
     if (dl1 + dl2) == (dl3 + dl4) and nl % (dl1+dl2) == 0:
         return True
-    else:
-        return False
+    return False
 
 
 n = int(input())

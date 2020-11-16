@@ -30,26 +30,30 @@ def read_int_line():
     return list(line)
 
 
-def inrange (xr,yr, xr1, yr1,  xr2, yr2 ):
+def in_range (xr,yr, xr1, yr1,  xr2, yr2 ):
     if (xr == xr1 or xr == xr2) and (yr >= yr1 and yr <= yr2):
         return True
     else:
         return False
 
-def inborder (xr,yr, xr1, yr1,  xr2, yr2 ):
+
+def in_border (xr,yr, xr1, yr1,  xr2, yr2 ):
     if inrange(xr,yr, xr1, yr1,  xr2, yr2) or inrange(yr, xr, yr1, xr1, yr2, xr2):
         return True
     else:
         return False
 
-# Instide in rectangle - not used
+
+# Inside in rectangle - not used
 def inside(xr, yr, xr1, yr1, xr2, yr2):
     if (xr >= xr1 and xr <= xr2) and (yr > yr1 and yr < yr2):
         return True
     else:
         return False
 
+
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
 
 def is_weekend(day):
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -61,15 +65,14 @@ def is_weekend(day):
         return "Weekend"
 
 
-
 # Coins:
 # I was searching for clever way and found:
-
 def _get_change_making_matrix(set_of_coins, r: int):
     m = [[0 for _ in range(r + 1)] for _ in range(len(set_of_coins) + 1)]
     for i in range(1, r + 1):
         m[0][i] = float('inf')  # By default there is no way of making change
     return m
+
 
 def change_making(coins, n: int):
     """This function assumes that all coins are available infinitely.
@@ -103,3 +106,12 @@ print(change_making(coins_values, 523))
 # Reverse string:
 text = ""
 result = text[::-1]
+
+nums = "alabala"
+a = 5 if len(nums) > 2 else 3 # a = 2
+nums = [1, 2, 34, 45,  55]
+lst = ["even" if _ % 2 == 0 else "odd" for _ in nums]
+a = nums.copy()
+result = [[index, a[index]] for index in range(len(a))]
+
+matrix = [[j for j in range(5)] for i in range(5)] 
