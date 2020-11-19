@@ -117,3 +117,7 @@ a = nums.copy()
 result = [[index, a[index]] for index in range(len(a))]
 
 matrix = [[j for j in range(5)] for i in range(5)]
+
+
+while (test := input()) != "End":
+    print(test)
